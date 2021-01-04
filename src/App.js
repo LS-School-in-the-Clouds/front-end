@@ -1,24 +1,27 @@
+//Functional Imports
+import React from "react";
+import { BrowserRouter as Router, Link, Route } from "react-router-dom";
+
+//Style Imports
 import logo from './style/content/logo.svg';
 import './style/App.css';
 
+//Component Imports
+import LoginForm from "./components/Landing/Login/LoginForm";
+import Landing from "./components/Landing/Landing";
+import Dashboard from "./components/Dashboard/Dashboard";
+import PrivateRoute from "./utils/privateRoute";
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Router>
+      <Route exact path="/" component={Landing}/>
+      <PrivateRoute path="/student" component={Dashboard}/>
+      <PrivateRoute path="/mentor" component={Dashboard}/>
+      <PrivateRoute path="/admin" component={Dashboard}/>
+    </Router>
+    </>
   );
 }
 
