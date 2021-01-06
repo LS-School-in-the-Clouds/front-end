@@ -1,0 +1,1 @@
+export const BASE_URL = 'https://school-in-the-clouds.herokuapp.com/'

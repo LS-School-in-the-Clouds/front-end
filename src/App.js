@@ -1,6 +1,7 @@
 //Functional Imports
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
+
 
 //Style Imports
 import logo from './style/content/logo.svg';
@@ -12,17 +13,13 @@ import Landing from "./components/Landing/Landing";
 import Dashboard from "./components/Dashboard/Dashboard";
 import PrivateRoute from "./utils/privateRoute";
 
-function App() {
-  return (
-    <>
-    <Router>
-      <Route exact path="/" component={Landing}/>
-      <PrivateRoute path="/student" component={Dashboard}/>
-      <PrivateRoute path="/mentor" component={Dashboard}/>
-      <PrivateRoute path="/admin" component={Dashboard}/>
-    </Router>
-    </>
-  );
-}
 
-export default App;
+export default function App() {
+  
+
+  return (
+    <div className='container'>
+      <LoginForm />
+    </div>
+  )
+}
