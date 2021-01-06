@@ -1,8 +1,9 @@
 import React from 'react'
 import '../../style/Landing.css'
-import { Route, Switch } from 'react-router-dom'
 import { useHistory } from 'react-router-dom'
-import styled from 'styled-components'
+import PicOne from '../../style/content/pic01.jpg'
+import PicTwo from '../../style/content/pic02.jpg'
+import PicThree from '../../style/content/pic03.jpg'
 
 
 
@@ -18,9 +19,6 @@ export default function Content(props) {
   
  const routeToSignUp = () => {
      history.push('/signup')}
-
-
-
 
 
     return (
@@ -105,7 +103,7 @@ export default function Content(props) {
     {/* Two */}
     <section id="two" className="wrapper alt style2">
       <section className="spotlight">
-        <div className="image"><img src="../../style/content/pic01.jpg" alt="" /></div>
+        <div className="image"><img src={PicOne} alt="" /></div>
         <div className="content">
           <h2>
             Magna primis lobortis<br />
@@ -118,7 +116,7 @@ export default function Content(props) {
         </div>
       </section>
       <section className="spotlight">
-        <div className="image"><img src="../../style/content/pic02.jpg" alt="" /></div>
+        <div className="image"><img src={PicTwo} alt="" /></div>
         <div className="content">
           <h2>
             Tortor dolore feugiat<br />
@@ -131,7 +129,7 @@ export default function Content(props) {
         </div>
       </section>
       <section className="spotlight">
-        <div className="image"><img src="../../style/content/pic03.jpg" alt="" /></div>
+        <div className="image"><img src={PicThree} alt="" /></div>
         <div className="content">
           <h2>
             Augue eleifend aliquet<br />
