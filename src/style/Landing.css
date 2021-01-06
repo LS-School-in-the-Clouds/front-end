@@ -2972,12 +2972,17 @@ input, select, textarea {
 			}
 
 		.wrapper.style2 {
-			background-image: linear-gradient(to bottom right, #71aaff, #8db6a9);
+			background-image: linear-gradient( #71aaff, #8db6a9,  #3d3d3d);
+			
 			
 		}
+		#lastPara{
+			background-image: linear-gradient(to bottom right, #ac78dd, #322EFF);
 
+
+		}
 		.wrapper.style3 {
-			background-image: linear-gradient(to bottom right, #9C46EC, #322EFF);
+			background-image: linear-gradient(to bottom right, #2c2c2c, #000000);
 			color: #d3d4e4;
 		}
 

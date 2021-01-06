@@ -29,26 +29,7 @@ export default function Content(props) {
   <div id='NewBanner'>
   <div id="page-wrapper">
   
-    {/* Header */}
-    <header id="header" className="alt">
-      <h1><a href="index.html">School In The Cloud</a></h1>
-      <nav id="nav">
-        <ul>
-          <li className="special">
-            <a href="#menu" className="menuToggle"><span>Menu</span></a>
-            <div id="menu">
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="generic.html">About Us</a></li>
-                <li><a href="elements.html">Meet The Team</a></li>
-                <li><a href="#">Sign Up</a></li>
-                <li><a href="#">Log In</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </nav>
-    </header>
+
     {/* Banner */}
     <section id="banner">
       <div className="inner">
@@ -71,11 +52,12 @@ export default function Content(props) {
 
         </ul>
       </div>
-      <a href="#one" className="more scrolly">Learn More</a>
+      <a href="#" className="more scrolly">Learn More</a>
     </section>
     </div>
     {/* One */}
     <section id="one" className="wrapper style1 special">
+     
       <div className="inner">
         <header className="major">
           <h2>
@@ -89,17 +71,7 @@ export default function Content(props) {
             ullamcorper.
           </p>
         </header>
-        <ul className="icons major">
-          <li>
-            <span className="icon fa-gem major style1"><span className="label">Lorem</span></span>
-          </li>
-          <li>
-            <span className="icon fa-heart major style2"><span className="label">Ipsum</span></span>
-          </li>
-          <li>
-            <span className="icon solid fa-code major style3"><span className="label">Dolor</span></span>
-          </li>
-        </ul>
+       
       </div>
     </section>
     {/* Two */}
@@ -131,6 +103,7 @@ export default function Content(props) {
         </div>
       </section>
       <section className="spotlight">
+        
         <div className="image"><img src={PicThree} alt="" /></div>
         <div className="content">
           <h2>
@@ -141,7 +114,8 @@ export default function Content(props) {
             Aliquam ut ex ut augue consectetur interdum. Donec hendrerit
             imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.
           </p>
-        </div>
+          </div>
+        
       </section>
     </section>
     {/* Three */}
@@ -202,22 +176,8 @@ export default function Content(props) {
         </ul>
       </div>
     </section>
-    {/* CTA */}
-    <section id="cta" className="wrapper style4">
-      <div className="inner">
-        <header>
-          <h2>Arcue ut vel commodo</h2>
-          <p>
-            Aliquam ut ex ut augue consectetur interdum endrerit imperdiet
-            amet eleifend fringilla.
-          </p>
-        </header>
-        <ul className="actions stacked">
-          <li><a href="#" className="button fit primary">Explore</a></li>
-          <li><a href="#" className="button fit">Learn More</a></li>
-        </ul>
-      </div>
-    </section>
+  
+
     {/* Footer */}
     <footer id="footer">
       <ul className="icons">
