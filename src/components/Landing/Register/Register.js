@@ -28,8 +28,6 @@ const Register = (props) => {
             ...form,
             [ev.target.name]: ev.target.value
         })
-        console.log(form)
-        // change(name);
     };
 
 

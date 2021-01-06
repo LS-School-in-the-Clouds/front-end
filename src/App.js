@@ -10,7 +10,7 @@ import './style/App.css';
 import Login from "./components/Landing/Login/Login";
 import Landing from "./components/Landing/Landing";
 import Register from "./components/Landing/Register/Register";
-import Dashboard from "./components/Dashboard/Dashboard";
+import Dashboard from "./components/Dashboard/boards/Dashboard";
 import PrivateRoute from "./utils/hooks/PrivateRoute";
 
 const App = () => {
@@ -18,9 +18,9 @@ const App = () => {
     <>
     <Router>
       <Route exact path="/" component={Landing}/>
-      <PrivateRoute path="/student" component={Dashboard}/>
-      <PrivateRoute path="/mentor" component={Dashboard}/>
-      <PrivateRoute path="/admin" component={Dashboard}/>
+      <Route path="/login" component={Login}/>
+      <Route path="/register" component={Register}/>
+      <PrivateRoute path="/dash" component={Dashboard}/>
     </Router>
     </>
   );
