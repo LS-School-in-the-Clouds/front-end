@@ -1,29 +1,51 @@
-import React from "react";
+//Functional Imports
+import React, { useState } from "react";
+import { connect } from "react-redux";
+
+//Component Imports
+import { signUpSubmit } from "../../../utils/redux/actions/AuthActions"
+
+//Style Imports
+
+const initialState = {
+    username: "",
+    email: "",
+    password: "",
+    role: ""
+}
 
 const Register = (props) => {
-    
-    const onSubmit = (event) =>{
-        event.PreventDefault();
-        submit();
+
+    const [form, setForm] = useState({ initialState })
+    const handleSubmit = (ev) =>{
+        ev.PreventDefault();
+        // submit();
+        signUpSubmit(form)
     };
 
-    const onChange = (event) => {
-        const {name,value,type,checked} = event.target;
-        change(name);
+    const handleChange = (ev) => {
+        const {name, value} = ev.target;
+        setForm({
+            ...form,
+            [ev.target.name]: ev.target.value
+        })
+        // change(name);
     };
+
 
     return (
         <div>
-            <form className="form container" onSubmit={onSubmit}>
+            <form className="form container" onSubmit={handleSubmit}>
                 <div className="form-group inputs"></div>
                     <h2>Join School in the Cloud</h2>
-                <div className="container ">
+                <div className="container">
                     <label>UserName
                         <input
                             name='username'
                             type='text'
-                            value='change this'
-                            onChange={onChange}
+                            value={form.username}
+                            onChange={handleChange}
+                            placeholder="Username..."
                      />
                     </label>
                 </div>
@@ -32,8 +54,9 @@ const Register = (props) => {
                     <input
                         name='email'
                         type='email'
-                        value='change This'
-                        onChange={onChange}
+                        value={form.email}
+                        onChange={handleChange}
+                        placeholder="Email..."
                     />
                 </label>
                 </div>
@@ -42,24 +65,30 @@ const Register = (props) => {
                         <input
                             name="password"
                             type='password'
-                            value='change'
+                            value={form.password}
+                            onChange={handleChange}
+                            placeholder="Password..."
                         />
                     </label>
                 </div>
                 <div className="container">
                     <label>Role
-                        <select name='role' value="change this" onChange={onChange}>
+                        <select name='role' value={form.role} onChange={handleChange}>
                             <option value="">Select your role</option>
-                            <option value='student'>Student</option>
-                            <option value='mentor'>Mentor</option>
-                            <option value='admin'>Admin</option>     
+                            <option name="role" value='student'>Student</option>
+                            <option name="role" value='mentor'>Mentor</option>
+                            <option name="role" value='admin'>Admin</option>     
                         </select>
                     </label>
                 </div>
-                <button id="submit" disabled={disabled}>Sign Up!</button>
+                <button id="submit">Sign Up!</button>
             </form>
         </div>
     )
 }
 
-export default Register;
+    const mapStateToProps = (state) => {
+        return state;
+    };
+
+export default connect(mapStateToProps, {signUpSubmit})(Register)
