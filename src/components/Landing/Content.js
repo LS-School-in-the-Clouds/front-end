@@ -26,8 +26,9 @@ export default function Content(props) {
            <div>
 
   <title>School In The Cloud</title>
-  
+  <div id='NewBanner'>
   <div id="page-wrapper">
+  
     {/* Header */}
     <header id="header" className="alt">
       <h1><a href="index.html">School In The Cloud</a></h1>
@@ -56,7 +57,7 @@ export default function Content(props) {
           School in the Cloud is a platform that trains senior volunteers to teach students in a group or individual setting..
         </p>
         <ul className="actions special">
-       
+      
          {/* BUTTON */}
 
           <li>
@@ -72,6 +73,7 @@ export default function Content(props) {
       </div>
       <a href="#one" className="more scrolly">Learn More</a>
     </section>
+    </div>
     {/* One */}
     <section id="one" className="wrapper style1 special">
       <div className="inner">
