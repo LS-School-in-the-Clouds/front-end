@@ -1,6 +1,7 @@
 //Functional Imports
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Link, Route } from "react-router-dom";
+
 
 //Style Imports
 import logo from './style/content/logo.svg';
@@ -25,5 +26,3 @@ function App() {
     </>
   );
 }
-
-export default App;
