@@ -1,5 +1,4 @@
-
-const mattyAPI = ""
+const mattyAPI = "";
 
 
 export default mattyAPI;
