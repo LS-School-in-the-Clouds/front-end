@@ -1,5 +1,4 @@
+const brianAPI = "";
 
-const brianAPI = ""
 
-
-export default brianAPI
+export default brianAPI;
