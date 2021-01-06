@@ -16,11 +16,10 @@ const initialState = {
 
 const Register = (props) => {
 
-    const [form, setForm] = useState({ initialState })
+    const [form, setForm] = useState( initialState )
     const handleSubmit = (ev) =>{
-        ev.PreventDefault();
-        // submit();
-        signUpSubmit(form)
+        ev.preventDefault();
+        props.signUpSubmit(form)
     };
 
     const handleChange = (ev) => {
@@ -29,6 +28,7 @@ const Register = (props) => {
             ...form,
             [ev.target.name]: ev.target.value
         })
+        console.log(form)
         // change(name);
     };
 
@@ -75,9 +75,9 @@ const Register = (props) => {
                     <label>Role
                         <select name='role' value={form.role} onChange={handleChange}>
                             <option value="">Select your role</option>
-                            <option name="role" value='student'>Student</option>
-                            <option name="role" value='mentor'>Mentor</option>
-                            <option name="role" value='admin'>Admin</option>     
+                            <option name="role" value='3'>Student</option>
+                            <option name="role" value='2'>Mentor</option>
+                            <option name="role" value='1'>Admin</option>     
                         </select>
                     </label>
                 </div>
@@ -91,4 +91,4 @@ const Register = (props) => {
         return state;
     };
 
-export default connect(mapStateToProps, {signUpSubmit})(Register)
+export default connect(mapStateToProps, { signUpSubmit })(Register)

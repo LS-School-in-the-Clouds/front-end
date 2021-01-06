@@ -24,7 +24,7 @@ const Dashboard = () => {
                     </Route>
                 </Switch>
             </Navbar>
-
+            
         </>
     );
 }
