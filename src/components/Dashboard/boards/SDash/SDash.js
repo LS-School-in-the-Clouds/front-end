@@ -1,6 +1,6 @@
 //Functional imports
 import react, { useState } from 'react';
-import { useRouteMatch } from "react-router-dom"
+import { useRouteMatch, Route, useParams} from "react-router-dom"
 import { connect } from 'react-redux';
 
 //Component Imports
@@ -13,6 +13,12 @@ export const SDash = (props) => {
     return(
         <>
         <StudentNavBar />
+        <Route path={'/dash/mentors'}>
+            <SMentors />
+        </Route>
+        <Route path={'/dash/profile'}>
+            <SProfile />
+        </Route>
         <h1>I'm for Students!</h1>
         </>
     );

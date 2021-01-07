@@ -6,3 +6,5 @@ const SProfile = () => {
         </>
     )
 }
+
+export default SProfile;
