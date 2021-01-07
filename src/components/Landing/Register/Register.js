@@ -20,7 +20,7 @@ const Register = (props) => {
     const handleSubmit = (ev) =>{
         ev.preventDefault();
         props.signUpSubmit(form)
-        history.push('/dash')
+        history.push('/login')
     };
 
     const handleChange = (ev) => {
@@ -29,6 +29,7 @@ const Register = (props) => {
             ...form,
             [ev.target.name]: ev.target.value
         })
+        console.log(form)
     };
 
 
