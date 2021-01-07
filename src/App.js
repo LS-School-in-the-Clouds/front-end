@@ -1,6 +1,6 @@
 //Functional Imports
 import React from "react";
-import { BrowserRouter as Router, Link, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 
 //Style Imports
@@ -17,10 +17,13 @@ const App = () => {
   return (
     <>
     <Router>
-      <Route exact path="/" component={Landing}/>
-      <Route path="/login" component={Login}/>
-      <Route path="/register" component={Register}/>
-      <PrivateRoute path="/dash" component={Dashboard}/>
+      <Switch>
+        <Route exact path="/" component={Landing}/>
+        <Route path="/login" component={Login}/>
+        <Route path="/register" component={Register}/>
+        <PrivateRoute path="/dash" component={Dashboard}/>
+      </Switch>
+
     </Router>
     </>
   );

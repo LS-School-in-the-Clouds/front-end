@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 
 //Component Imports
 import { signUpSubmit } from "../../../utils/redux/actions/AuthActions"
-
+import { useHistory } from 'react-router-dom'
 //Style Imports
 
 const initialState = {
@@ -15,11 +15,12 @@ const initialState = {
 }
 
 const Register = (props) => {
-
+    const history = useHistory()
     const [form, setForm] = useState( initialState )
     const handleSubmit = (ev) =>{
         ev.preventDefault();
         props.signUpSubmit(form)
+        history.push('/dash')
     };
 
     const handleChange = (ev) => {
