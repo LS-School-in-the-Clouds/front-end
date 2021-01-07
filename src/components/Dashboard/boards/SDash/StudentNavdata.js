@@ -14,14 +14,8 @@ import * as IconName from 'react-icons/im'
         className: 'student-nav-text',
     },
     {
-        title: 'Tasks',
-        path: '/tasks',
-        icon: <FaIcons.FaTasks/>,
-        className: 'student-nav-text',
-    },
-    {
         title: 'Mentors',
-        path: '/mentor',
+        path: '/mentors',
         icon: <MdIcons.MdGroup/>,
         className: 'student-nav-text',
     },

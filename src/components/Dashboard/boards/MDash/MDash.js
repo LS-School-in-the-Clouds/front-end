@@ -2,7 +2,7 @@
 import react, { useState } from 'react';
 
 //Component imports
-import MentorNavbar from '../navbars/Navbar'
+import MentorNavbar from './MentorNav'
 
 
 export const MDash = ({props}) => {

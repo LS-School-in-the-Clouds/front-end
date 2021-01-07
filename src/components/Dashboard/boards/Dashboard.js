@@ -1,14 +1,14 @@
 //Functional imports
 import React from "react";
 import { connect } from "react-redux";
-import { Link, Route, Switch } from "react-router-dom"
+import { Link, Redirect, Route, Switch } from "react-router-dom"
 
 //Component imports
-import Navbar from "../navbars/Navbar";
+import Navbar from "./MDash/MentorNav";
 import { getAdminData, getMentorData, getStudentData } from "../../../utils/redux/actions/AuthActions";
-import ADash from "./ADash";
-import MDash from "./MDash";
-import SDash from "./SDash";
+import ADash from "./ADash/ADash";
+import MDash from "./MDash/MDash";
+import SDash from "./SDash/SDash";
 //Style imports
 
 const Dashboard = ({ role, user_id }) => {
