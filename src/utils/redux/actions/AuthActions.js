@@ -14,7 +14,7 @@ export const RECEIVED_STUDENT = "RECEIVED_STUDENT";
 
 export const signUpSubmit = form => dispatch => {
     return(
-        axios
+        axiosWithAuth()
         .post(`${API_BASE}/auth/register`, form)
         .then(res => {
             console.log(res.data)
@@ -28,7 +28,7 @@ export const signUpSubmit = form => dispatch => {
 
 export const logInSubmit = form => dispatch => {
     return(
-        axios
+        axiosWithAuth()
         .post(`${API_BASE}/auth/login`, form)
         .then(res => {
             localStorage.setItem("token", res.data.token)

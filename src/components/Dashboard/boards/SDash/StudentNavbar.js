@@ -1,14 +1,13 @@
-import React from "react"
-import {Link} from 'react-router-dom'
-import MentorNavData from './navbardata/mentornavdata'
-import '../../../style/Navbar.css'
+import React from 'react'
+import { Link } from 'react-router-dom'
+import StudentNavData from './StudentNavdata'
 
-const MentorNavbar = () => {
-    return(
-        <>
-            <div className="nav-menu">
-                <ul className="nav-menu-items"> 
-                    {MentorNavData.map((item,index)=>{
+function StudentNavBar() {
+    return (
+        <div>
+            <div className="student-nav-menu">
+                <ul className="student-nav-menu-items">
+                    {StudentNavData.map((item,index)=>{
                         return (
                             <li key={index} className={item.className}>
                                 <Link to={item.path}>
@@ -19,9 +18,10 @@ const MentorNavbar = () => {
                         );
                     })}
                 </ul>
+
             </div>
-        </>
-    ) 
+        </div>
+    )
 }
 
-export default MentorNavbar;
+export default StudentNavBar
