@@ -4,7 +4,6 @@ import axiosWithAuth from "../../hooks/axiosWithAuth";
 //Functional Imports
 import axios from "axios";
 import API_BASE from "../../keys"
-import { useHistory } from "react-router-dom";
 
 //ACTION VARIABLES
 export const USER_SIGNED_UP = "USER_SIGNED_UP";
@@ -15,7 +14,7 @@ export const RECEIVED_STUDENT = "RECEIVED_STUDENT";
 
 export const signUpSubmit = form => dispatch => {
     return(
-        axiosWithAuth()
+        axios
         .post(`${API_BASE}/auth/register`, form)
         .then(res => {
             console.log(res.data)
@@ -29,7 +28,7 @@ export const signUpSubmit = form => dispatch => {
 
 export const logInSubmit = form => dispatch => {
     return(
-        axiosWithAuth()
+        axios
         .post(`${API_BASE}/auth/login`, form)
         .then(res => {
             localStorage.setItem("token", res.data.token)
