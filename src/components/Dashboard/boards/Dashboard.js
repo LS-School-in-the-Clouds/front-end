@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { Link, Route, Switch } from "react-router-dom"
 
 //Component imports
-import Navbar from "../Navbar";
+import Navbar from "../navbars/Navbar";
 import { getAdminData, getMentorData, getStudentData } from "../../../utils/redux/actions/AuthActions";
 import ADash from "./ADash";
 import MDash from "./MDash";
