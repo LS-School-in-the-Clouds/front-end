@@ -1,17 +1,25 @@
 //Functional imports
 import react, { useState } from 'react';
+import { useRouteMatch } from "react-router-dom"
+import { connect } from 'react-redux';
 
 //Component Imports
-import StudentNavBar from './StudentNavbar'
- 
-export const SDash = ({props}) => {
+import StudentNavBar from './StudentNavbar';
+import SMentors from './SMentors';
+import SProfile from './SProfile';
+
+
+export const SDash = (props) => {
     return(
         <>
-        <StudentNavBar/>
-        <SMentors />
+        <StudentNavBar />
         <h1>I'm for Students!</h1>
         </>
     );
 }
 
-export default SDash;
+const mapStateToProps = (state) => {
+    return state;
+}
+
+export default connect(mapStateToProps, {})(SDash);
