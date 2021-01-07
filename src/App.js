@@ -23,7 +23,6 @@ const App = () => {
         <Route path="/register" component={Register}/>
         <PrivateRoute path="/dash" component={Dashboard}/>
       </Switch>
-
     </Router>
     </>
   );
