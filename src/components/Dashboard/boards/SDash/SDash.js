@@ -8,7 +8,7 @@ export const SDash = ({props}) => {
     return(
         <>
         <StudentNavBar/>
-        <SMentors />
+        {/* <SMentors /> */}
         <h1>I'm for Students!</h1>
         </>
     );
