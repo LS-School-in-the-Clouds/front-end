@@ -1,7 +1,7 @@
 import React from "react"
 import {Link} from 'react-router-dom'
-import MentorNavData from '../boards/MDash/mentornavdata'
-import '../../../style/Navbar.css'
+import MentorNavData from './MentorNavData'
+import '../../../../style/Navbar.css'
 
 const MentorNavbar = () => {
     return(

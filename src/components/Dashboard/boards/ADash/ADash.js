@@ -2,10 +2,10 @@
 import react, { useState } from 'react';
 
 //Component Imports
-import AdminNavBar from '../navbars/AdminNavbar'
+import AdminNavBar from './AdminNavbar'
 
 
-export const ADash = ({props}) => {
+export const ADash = (props) => {
     return(
         <>
         <AdminNavBar/>

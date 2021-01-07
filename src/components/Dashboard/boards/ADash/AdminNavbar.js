@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import AdminNavData from '../boards/ADash/AdminNavdata'
+import AdminNavData from './AdminNavdata'
 
 function AdminNavbar() {
     return (

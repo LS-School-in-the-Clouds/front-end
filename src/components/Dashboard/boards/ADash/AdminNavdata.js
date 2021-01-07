@@ -6,7 +6,7 @@ import * as MdIcons from 'react-icons/md'
 import * as IconName from 'react-icons/im'
 
 
- const AdminNavData = [
+export const AdminNavData = [
     {
         title: 'Home',
         path: '/',
