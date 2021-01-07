@@ -2972,11 +2972,17 @@ input, select, textarea {
 			}
 
 		.wrapper.style2 {
-			background-color: #2e3842;
+			background-image: linear-gradient( #71aaff, #8db6a9,  #3d3d3d);
+			
+			
 		}
+		#lastPara{
+			background-image: linear-gradient(to bottom right, #ac78dd, #322EFF);
 
+
+		}
 		.wrapper.style3 {
-			background-image: linear-gradient(to bottom right, #9C46EC, #322EFF);
+			background-image: linear-gradient(to bottom right, #2c2c2c, #000000);
 			color: #d3d4e4;
 		}
 
@@ -3021,7 +3027,7 @@ input, select, textarea {
 			.wrapper.style3 input[type="email"],
 			.wrapper.style3 select,
 			.wrapper.style3 textarea {
-				background-color: rgba(255, 255, 255, 0.075);
+				background-color: rgb(0, 0, 0);
 			}
 
 			.wrapper.style3 select {
@@ -3082,7 +3088,7 @@ input, select, textarea {
 			}
 
 				.wrapper.style3 table tbody tr:nth-child(2n + 1) {
-					background-color: rgba(255, 255, 255, 0.075);
+					background-color: rgba(0, 0, 0, 0.075);
 				}
 
 			.wrapper.style3 table th {
@@ -3135,7 +3141,7 @@ input, select, textarea {
 			}
 
 		.wrapper.style4 {
-			background-color: transparent;
+			background-image: linear-gradient(to bottom right, #2f2f2f, #000000);
 		}
 
 		.wrapper.style5 {
@@ -3442,7 +3448,7 @@ input, select, textarea {
 		-ms-transition: background-color 0.2s ease;
 		transition: background-color 0.2s ease;
 		background: #2e3842;
-		height: 3em;
+		height: 3em; 
 		left: 0;
 		line-height: 3em;
 		position: fixed;
@@ -3558,10 +3564,24 @@ input, select, textarea {
 			}
 
 /* Banner */
-
+			#NewBanner{
+				background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./content/banner.jpg');
+				background-attachment: fixed;
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				text-align: center;
+				height: 107vh;
+				min-height: 35em;
+				
+				
+			
+				
+			}
 	#banner {
   
-
+		
+		
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -3785,6 +3805,8 @@ input, select, textarea {
 			#cta .inner {
 				display: block;
 				text-align: center;
+				
+				
 			}
 
 				#cta .inner header {
@@ -3885,7 +3907,7 @@ input, select, textarea {
 
 	#footer {
 		padding: 6em 0 4em 0 ;
-		background-color: #1d242a;
+		background-color: black;
 		text-align: center;
 	}
 
@@ -3964,7 +3986,7 @@ input, select, textarea {
 
 	body.landing #page-wrapper {
 		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("./content/banner.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("./content/banner.jpg");
+		background-image: url("./content/banner.jpg");
 		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("./content/banner.jpg");
 		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("./content/banner.jpg");
 		background-attachment: fixed;
