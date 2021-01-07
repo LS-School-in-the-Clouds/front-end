@@ -6,12 +6,13 @@ const PrivateRoute = ({component: Component, ...rest}) => {
         {...rest}
         render={(props) => {
             if(localStorage.getItem("token")) {
+                console.log("magic")
                 return(<Component {...props}/>);
             } else {
+                console.log("dog")
                 return <Redirect to="/"/>;   
             }
         }}
-    
     />)
 }
 

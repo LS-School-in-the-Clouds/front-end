@@ -4,6 +4,7 @@ import axiosWithAuth from "../../hooks/axiosWithAuth";
 //Functional Imports
 import axios from "axios";
 import API_BASE from "../../keys"
+import { useHistory } from "react-router-dom";
 
 //ACTION VARIABLES
 export const USER_SIGNED_UP = "USER_SIGNED_UP";
@@ -32,7 +33,6 @@ export const logInSubmit = form => dispatch => {
         .post(`${API_BASE}/auth/login`, form)
         .then(res => {
             localStorage.setItem("token", res.data.token)
-            console.log(res.data.token)
             dispatch({ type: USER_LOGGED_IN, payload: res.data })
         })
         .catch(err => {

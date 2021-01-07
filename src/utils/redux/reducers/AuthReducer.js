@@ -8,7 +8,6 @@ const initialState = {
     email: "",
     password: "",
     role: "",
-    token: "",
 }
 
 const reducer = (state = initialState, action) => {

@@ -5,37 +5,33 @@ import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 
 import { logInSubmit } from "../../../utils/redux/actions/AuthActions"
-
+import { useHistory } from "react-router-dom"
 
 const initialForm = {
     username: '',
-    email: '',
     password: '',
-    role: ''
   }
 
 
 function Login(props) {
 
     const [form, setForm] = useState(initialForm);
-
+    const history = useHistory();
     const onChange = (ev) => {
         setForm({...form,
         [ev.target.name]: ev.target.value
-    })
+        })
     }
-
-    
     const onSubmit = (evt) => {
         evt.preventDefault();
         props.logInSubmit(form)
         setForm(initialForm)
+        history.push('/dash')
         };
 
     return(
         <>
         <h1>Login</h1>
-
         <form className='form container' onSubmit={onSubmit} >
             <div className='form-group inputs'>
                 <label htmlFor="foo">
