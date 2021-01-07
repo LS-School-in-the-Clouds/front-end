@@ -11,25 +11,25 @@ import * as IconName from 'react-icons/im'
         title: 'Home',
         path: '/',
         icon: <AiIcons.AiFillHome/>,
-        className: 'admin-nav-text',
+        className: 'student-nav-text',
     },
     {
         title: 'Tasks',
         path: '/tasks',
         icon: <FaIcons.FaTasks/>,
-        className: 'admin-nav-text',
+        className: 'student-nav-text',
     },
     {
-        title: 'Mentor',
+        title: 'Mentors',
         path: '/mentor',
         icon: <MdIcons.MdGroup/>,
-        className: 'admin-nav-text',
+        className: 'student-nav-text',
     },
     {
         title: 'Profile',
         path: '/profile',
         icon: <IconName.ImProfile/>,
-        className: 'admin-nav-text',
+        className: 'student-nav-text',
     },
 ]
 

@@ -5,8 +5,8 @@ import StudentNavData from './navbardata/StudentNavdata'
 function StudentNavBar() {
     return (
         <div>
-            <div className="nav-menu">
-                <ul className="nav-menu-items">
+            <div className="student-nav-menu">
+                <ul className="student-nav-menu-items">
                     {StudentNavData.map((item,index)=>{
                         return (
                             <li key={index} className={item.className}>
