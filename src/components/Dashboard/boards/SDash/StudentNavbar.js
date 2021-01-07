@@ -1,8 +1,11 @@
+//Functional Imports
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+
+//Component Imports
 import StudentNavData from './StudentNavdata'
 
-function StudentNavBar() {
+const StudentNavBar = (props) => {
     return (
         <div>
             <div className="student-nav-menu">
@@ -10,10 +13,10 @@ function StudentNavBar() {
                     {StudentNavData.map((item,index)=>{
                         return (
                             <li key={index} className={item.className}>
-                                <Link to={item.path}>
+                                <NavLink to={item.path}>
                                     {item.icon}
                                     <span>{item.title}</span>
-                                </Link>
+                                </NavLink>
                             </li>
                         );
                     })}

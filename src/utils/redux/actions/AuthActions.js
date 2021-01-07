@@ -32,7 +32,6 @@ export const logInSubmit = form => dispatch => {
         .post(`${API_BASE}/auth/login`, form)
         .then(res => {
             localStorage.setItem("token", res.data.token)
-            console.log(res.data.token)
             dispatch({ type: USER_LOGGED_IN, payload: res.data })
         })
         .catch(err => {
