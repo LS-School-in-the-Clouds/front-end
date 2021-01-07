@@ -2,13 +2,13 @@
 import react, { useState } from 'react';
 
 //Component imports
-import Navbar from '../navbars/Navbar'
+import MentorNavbar from '../navbars/Navbar'
 
 
 export const MDash = ({props}) => {
     return(
         <>
-        <Navbar/>
+        <MentorNavbar/>
         <h1>I'm for Mentors!</h1>
         </>
     );
