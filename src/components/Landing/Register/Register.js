@@ -6,6 +6,66 @@ import { connect } from "react-redux";
 import { signUpSubmit } from "../../../utils/redux/actions/AuthActions"
 import { useHistory } from 'react-router-dom'
 //Style Imports
+import styled from 'styled-components'
+
+    ////////// STYLING //////////
+    const SignUpStyle = styled.div`
+    
+         
+         width:40%;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        margin:0 auto;
+        margin-top:30%;
+        
+
+              // BLACK BOX CSS
+
+        width: 450px;
+        height: 700px;
+        left: 300px;
+        top: 100px;
+        background: #000000;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 40px;
+
+        form {
+            margin-top:20px;
+            height:auto;
+            width:70%;
+            display:flex;
+            flex-direction:column;
+            align-self:center;
+           
+
+        }
+        .submit {
+            margin-top:30px;
+            
+            
+        }
+        input {
+            border-radius: 20px;
+            margin-top:10px;
+        }
+      button {
+          border-radius: 100px;
+          width:70%;
+          height: 50px;
+          display:flex;
+          justify-content:center;
+          align-self:center;
+          align-items:center;
+          margin-top:15px;
+          
+      }
+
+      option {
+          background-color:black;
+      }
+        
+`
 
 const initialState = {
     username: "",
@@ -33,8 +93,9 @@ const Register = (props) => {
     };
 
 
+
     return (
-        <div>
+        <SignUpStyle>
             <form className="form container" onSubmit={handleSubmit}>
                 <div className="form-group inputs"></div>
                     <h2>Join School in the Cloud</h2>
@@ -71,7 +132,7 @@ const Register = (props) => {
                         />
                     </label>
                 </div>
-                <div className="container">
+                <div className="container loginRole">
                     <label>Role
                         <select name='role' value={form.role} onChange={handleChange}>
                             <option value="">Select your role</option>
@@ -81,9 +142,9 @@ const Register = (props) => {
                         </select>
                     </label>
                 </div>
-                <button id="submit">Sign Up!</button>
+                <button id="submit" className='button primary'>Sign Up!</button>
             </form>
-        </div>
+        </SignUpStyle>
     )
 }
 
