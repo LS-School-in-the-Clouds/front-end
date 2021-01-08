@@ -4,9 +4,9 @@ import styled from 'styled-components'
 function AdminOnboarding() {
     return (
         <div>
-            <div>
+            <SignUpStyle>
                 <Form>
-                    <h2>Hi Admin! <br/> Let's get your profile updated</h2>
+                    <h2>Hi <span>Admin!</span> <br/> Let's get your profile updated</h2>
                     <label>What is your first name?
                         <input
                             name="firstName"
@@ -55,8 +55,9 @@ function AdminOnboarding() {
                             value=""
                         />
                     </label>
+                    <button>Submit</button>
                 </Form>
-            </div>
+            </SignUpStyle>
         </div>
     )
 }
@@ -70,4 +71,69 @@ const Form = styled.form`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+`
+
+const SignUpStyle = styled.div`
+    
+         
+         width:40%;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        
+
+              // BLACK BOX CSS
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 450px;
+        height: 90vh;
+        left: 300px;
+        top: 100px;
+        background: #000000;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 40px;
+
+        form {
+            margin-top:20px;
+            height:auto;
+            width:70%;
+            display:flex;
+            flex-direction:column;
+            align-self:center;
+           
+
+        }
+        .submit {
+            margin-top:30px;
+            
+            
+        }
+        input {
+            border-radius: 20px;
+            margin-top:10px;
+        }
+      button {
+          border-radius: 100px;
+          width:70%;
+          height: 50px;
+          display:flex;
+          justify-content:center;
+          align-self:center;
+          align-items:center;
+          margin-top:15px;
+          
+      }
+
+      option {
+          background-color:black;
+      }
+
+      span{
+          color: #89B8FF;
+      }
+        
 `
