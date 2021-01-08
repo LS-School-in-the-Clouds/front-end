@@ -11,8 +11,8 @@ import MGroup from './MGroup';
 import MProfile from './MProfile';
 
 
-export const MDash = ({ user_id }) => {
-    const UID = user_id
+export const MDash = ( props ) => {
+    const UID = props.user_id
     useEffect(() => {
         getMentorData(UID)
     }, [])

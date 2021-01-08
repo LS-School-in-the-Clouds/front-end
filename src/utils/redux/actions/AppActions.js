@@ -2,7 +2,6 @@
 import axiosWithAuth from "../../hooks/axiosWithAuth";
 
 //Functional Imports
-import axios from "axios";
 import API_BASE from "../../keys";
 export const RECEIVED_ADMIN = "RECEIVED_ADMIN";
 export const RECEIVED_MENTOR = "RECIEVED_MENTOR";
