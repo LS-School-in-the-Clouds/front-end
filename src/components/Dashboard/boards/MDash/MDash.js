@@ -20,7 +20,7 @@ export const MDash = ({ user_id }) => {
         <>
         <MentorNav/>
         <Route path={'/dash/tasks'}>
-            <MTasks />
+            <MTasks user_id={user_id}/>
         </Route>
         <Route path={'/dash/group'}>
             <MGroup />
