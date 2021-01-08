@@ -12,14 +12,14 @@ import Register from "./components/Landing/Register/Register";
 import Dashboard from "./components/Dashboard/boards/Dashboard";
 import PrivateRoute from "./utils/hooks/PrivateRoute";
 
-import MentorOnboarding from './components/Onboarding/MentorOnb.js'
+import AdminOnboarding from './components/Onboarding/AdminOnb.js'
 
 const App = () => {
   return (
     <>
     <Router>
       <Switch>
-        <Route exact path="/" component={MentorOnboarding}/>
+        <Route exact path="/" component={AdminOnboarding}/>
         <Route path="/login" component={Login}/>
         <Route path="/register" component={Register}/>
         <PrivateRoute path="/dash" component={Dashboard}/>

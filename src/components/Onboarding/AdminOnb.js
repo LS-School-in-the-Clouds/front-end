@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 
-function StudentOnboarding() {
+function AdminOnboarding() {
     return (
         <div>
             <div>
                 <Form>
-                    <h2>Hi Student! <br> Let's get your profile updated</h2>
+                    <h2>Hi Admin! <br/> Let's get your profile updated</h2>
                     <label>What is your first name?
                         <input
                             name="firstName"
@@ -39,22 +39,21 @@ function StudentOnboarding() {
                             value=""
                         />
                     </label>
-                    <label>Preferred Times 
+                    <label>School District Name? 
                         <input
-                            name="times"
+                            name="district"
                             type="text"
-                            placeholder="Preferred times..."
+                            placeholder="School district..."
                             value=""
                     />
                     </label>
-                    <label>What are your interests?
+                    <label>What is your school name?
                         <input
-                            name=""
+                            name="school"
                             type="text"
-                            placeholder="finance, politics, etc"
+                            placeholder="School name..."
                             value=""
                         />
-
                     </label>
                 </Form>
             </div>
@@ -62,7 +61,7 @@ function StudentOnboarding() {
     )
 }
 
-export default StudentOnboarding;
+export default AdminOnboarding;
 
 const Form = styled.form`
     height: 100%;
@@ -70,10 +69,5 @@ const Form = styled.form`
     display: flex;
     flex-direction: column;
     align-items: center;
-`
-
-const InputDiv = styled.div`
     justify-content: center;
-    align-items: center;
-
 `
