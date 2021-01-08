@@ -1,7 +1,7 @@
 
 
 //functionial imports
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import { logInSubmit } from "../../../utils/redux/actions/AuthActions"
 import { useHistory } from "react-router-dom"
@@ -13,9 +13,13 @@ width:40%;
 display:flex;
 flex-direction:column;
 justify-content:center;
-margin:0 auto;
-margin-top:30%;
 font-size:1.1rem;
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
 
 
 // BLACK BOX CSS
@@ -75,12 +79,6 @@ function Login(props) {
         setForm(initialForm)
         history.push('/dash')
         };
-
-
-  
-
-
-
 
     return(
     <MainContainer className='LoginForm'>

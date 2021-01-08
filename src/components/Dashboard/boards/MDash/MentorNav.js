@@ -1,9 +1,9 @@
 import React from "react"
-import {Link} from 'react-router-dom'
-import MentorNavData from './MentorNavData'
+import { NavLink } from 'react-router-dom'
+import MentorNavData from './mentornavdata'
 import '../../../../style/Navbar.css'
 
-const MentorNavbar = () => {
+const MentorNav = () => {
     return(
         <>
             <div className="nav-menu">
@@ -11,10 +11,10 @@ const MentorNavbar = () => {
                     {MentorNavData.map((item,index)=>{
                         return (
                             <li key={index} className={item.className}>
-                                <Link to={item.path}>
+                                <NavLink to={item.path}>
                                     {item.icon}
                                     <span>{item.title}</span>
-                                </Link>
+                                </NavLink>
                             </li>
                         );
                     })}
@@ -24,4 +24,4 @@ const MentorNavbar = () => {
     ) 
 }
 
-export default MentorNavbar;
+export default MentorNav;
