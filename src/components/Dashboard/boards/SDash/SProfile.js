@@ -1,6 +1,6 @@
 import react from "react"
 
-const SProfile = () => {
+const SProfile = (props) => {
     return(
         <>
         </>

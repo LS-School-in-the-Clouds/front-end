@@ -1,7 +1,7 @@
 
 
 //functionial imports
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import { logInSubmit } from "../../../utils/redux/actions/AuthActions"
 import { useHistory } from "react-router-dom"
