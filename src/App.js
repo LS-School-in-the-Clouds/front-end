@@ -14,9 +14,7 @@ import Register from "./components/Landing/Register/Register";
 import Dashboard from "./components/Dashboard/boards/Dashboard";
 import PrivateRoute from "./utils/hooks/PrivateRoute";
 
-import StudentOnboarding from './components/Onboarding/StudentOnb.js'
-import AdminOnboarding from './components/Onboarding/AdminOnb.js'
-import MentorOnboarding from './components/Onboarding/MentorOnb.js'
+import MDash from './components/Dashboard/boards/MDash/MDash'
 
 import SMentors from '../src/components/Dashboard/boards/SDash/SMentors'
 
