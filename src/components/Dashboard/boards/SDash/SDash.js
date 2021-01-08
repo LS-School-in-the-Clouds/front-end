@@ -8,18 +8,27 @@ import { getStudentData } from '../../../../utils/redux/actions/AppActions'
 import StudentNavBar from './StudentNavbar';
 import SMentors from './SMentors';
 import SProfile from './SProfile';
+import MentorList from './SMentors';
+
+import { ThemeProvider } from 'styled-components'
 
 
 export const SDash = (props) => {
     const UID = props.user_id
     useEffect(() => {
         getStudentData(UID)
+<<<<<<< HEAD
     });
+=======
+    }, []);
+
+>>>>>>> 1b00836a954de0218426576320da69ae4b42ea36
     return(
         <>
         <StudentNavBar />
         <Route path={'/dash/mentors'}>
             <SMentors />
+        
         </Route>
         <Route path={'/dash/profile'}>
             <SProfile />
