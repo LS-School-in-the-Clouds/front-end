@@ -13,9 +13,13 @@ width:40%;
 display:flex;
 flex-direction:column;
 justify-content:center;
-margin:0 auto;
-margin-top:30%;
 font-size:1.1rem;
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
 
 
 // BLACK BOX CSS

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 function StudentOnboarding(props) {
 
     return (
-        <div>
+        
             <SignUpStyle>
                 <Form>
                     <h2>Hi <span>Student!</span> <br/> Let's get your profile updated</h2>
@@ -60,7 +60,7 @@ function StudentOnboarding(props) {
                     <button>Submit</button>
                 </Form>
             </SignUpStyle>
-        </div>
+        
     )
 }
 
@@ -81,22 +81,22 @@ const InputDiv = styled.div`
 `
 
 const SignUpStyle = styled.div`
-    
          
          width:40%;
         display:flex;
         flex-direction:column;
         justify-content:center;
-        margin:0 auto;
-        margin-top:30%;
         
 
               // BLACK BOX CSS
-
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
         width: 450px;
         height: 90vh;
-        left: 300px;
-        top: 100px;
         background: #000000;
         box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
         border-radius: 40px;

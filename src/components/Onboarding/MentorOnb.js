@@ -4,9 +4,9 @@ import styled from 'styled-components'
 function MentorOnboarding() {
     return (
         <div>
-            <div>
+            <SignUpStyle>
                 <Form>
-                    <h2>Hi Mentor! <br/> Let's get your profile updated</h2>
+                    <h2>Hi <span>Mentor!</span> <br/> Let's get your profile updated</h2>
                     <label>What is your first name?
                         <input
                             name="firstName"
@@ -65,7 +65,7 @@ function MentorOnboarding() {
                     </label>
                     <button>Submit</button>
                 </Form>
-            </div>
+            </SignUpStyle>
         </div>
     )
 }
@@ -87,8 +87,12 @@ const SignUpStyle = styled.div`
         display:flex;
         flex-direction:column;
         justify-content:center;
-        margin:0 auto;
-        margin-top:30%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
         
 
               // BLACK BOX CSS
@@ -134,6 +138,10 @@ const SignUpStyle = styled.div`
 
       option {
           background-color:black;
+      }
+
+      span{
+          color: #E3C8FD;
       }
         
 `

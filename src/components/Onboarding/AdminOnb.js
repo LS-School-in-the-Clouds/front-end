@@ -6,7 +6,7 @@ function AdminOnboarding() {
         <div>
             <SignUpStyle>
                 <Form>
-                    <h2>Hi Admin! <br/> Let's get your profile updated</h2>
+                    <h2>Hi <span>Admin!</span> <br/> Let's get your profile updated</h2>
                     <label>What is your first name?
                         <input
                             name="firstName"
@@ -80,12 +80,15 @@ const SignUpStyle = styled.div`
         display:flex;
         flex-direction:column;
         justify-content:center;
-        margin:0 auto;
-        margin-top:30%;
         
 
               // BLACK BOX CSS
-
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
         width: 450px;
         height: 90vh;
         left: 300px;
@@ -127,6 +130,10 @@ const SignUpStyle = styled.div`
 
       option {
           background-color:black;
+      }
+
+      span{
+          color: #89B8FF;
       }
         
 `
