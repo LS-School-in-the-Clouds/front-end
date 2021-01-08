@@ -1,13 +1,13 @@
-import React, { useEffect} from "react"
+import React, { useEffect } from "react"
 import { connect } from "react-redux"
 
-import { getAllTaskData } from '../../../../utils/redux/actions/AppActions'
+import { getAllMentorData } from '../../../../utils/redux/actions/AppActions'
 
 const SMentors = (props) => {
+    console.log(props.mentors)
     useEffect(() => {
-        getAllTaskData();
-        console.log(props.tasks)
-    })
+        getAllMentorData()
+    }, [])
     return(
         <>
         <form>
@@ -20,8 +20,8 @@ const SMentors = (props) => {
 
 const mapStateToProps = (state) => {
     return{
-        tasks: state.app.tasks
+        mentors: state.app.mentors
     }
 }
 
-export default connect(mapStateToProps, { getAllTaskData }) (SMentors)
+export default connect(mapStateToProps, { getAllMentorData }) (SMentors)

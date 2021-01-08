@@ -6,7 +6,7 @@ import API_BASE from "../../keys";
 export const RECEIVED_ADMIN = "RECEIVED_ADMIN";
 export const RECEIVED_MENTOR = "RECIEVED_MENTOR";
 export const RECEIVED_STUDENT = "RECEIVED_STUDENT";
-export const RECEIVED_ALL_TASKS = "RECEIVED_ALL_TASKS"
+export const RECEIVED_ALL_MENTORS = "RECEIVED_ALL_MENTORS";
 
 //Style Imports
 
@@ -49,15 +49,23 @@ export const getStudentData = id => dispatch => {
     );
 }
 
-export const getAllTaskData = dispatch => {
-    return(
+export const getAllMentorData = () => dispatch => {
+    return (
         axiosWithAuth()
-        .get(`${API_BASE}/tasks`)
+        .get(`${API_BASE}/mentors`)
         .then(res => {
-            dispatch({ type: RECEIVED_ALL_TASKS, payload: res.data })
+            dispatch({ type: RECEIVED_ALL_MENTORS, payload: res.data })
+            console.log(res.data)
         })
         .catch(err => {
             console.log(err)
         })
     );
+}
+
+export const putProfileData = (id, form) => dispatch => {
+    return(
+        axiosWithAuth()
+        .put(`${API_BASE}/students/:${id}`, form)
+    )
 }

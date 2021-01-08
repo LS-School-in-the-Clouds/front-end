@@ -14,7 +14,7 @@ export const SDash = (props) => {
     const UID = props.user_id
     useEffect(() => {
         getStudentData(UID)
-    }, []);
+    });
     return(
         <>
         <StudentNavBar />

@@ -1,7 +1,27 @@
-import react from "react"
+import React, { useState } from "react"
+import { connect } from 'react-redux'
 import styled from 'styled-components'
 
+const initialForm = {
+    first_name: '',
+    last_name: '',
+    interests: '',
+    state: '',
+    country: '',
+    career_goals: '',
+    preferred_times: '',
+    time_zones: '',
+    img_url: '',
+    user_id: '',
+  }
+
 const SProfile = (props) => {
+    const [form, setForm] = useState(initialForm)
+    const onChange = (ev) => {
+        setForm({...form,
+        [ev.target.name]: ev.target.value
+        })
+    }
     return(
         <>
         <SignUpStyle>
@@ -9,18 +29,20 @@ const SProfile = (props) => {
                 <h2>Hi <span>Student!</span> <br/> Let's get your profile updated</h2>
                 <label>What is your first name?
                     <input
-                        name="firstName"
+                        name="first_name"
                         type="text"
                         placeholder="First Name..."
-                        value=""
+                        onChange={onChange}
+                        value={form.first_name}
                     />
                 </label>
                 <label> What is your last name? 
                     <input
-                        name="lastName"
+                        name="last_name"
                         type="text"
                         placeholder="Last Name..."
-                        value=""
+                        onChange={onChange}
+                        value={form.last_name}
                     />
                 </label>
                 <label> State
@@ -28,7 +50,8 @@ const SProfile = (props) => {
                         name="state"
                         type="text"
                         placeholder="State..."
-                        value=""
+                        onChange={onChange}
+                        value={form.state}
                     />
                 </label>
                 <label>Country
@@ -36,25 +59,27 @@ const SProfile = (props) => {
                         name="country"
                         type="text"
                         placeholder="Country..."
-                        value=""
+                        onChange={onChange}
+                        value={form.country}
                     />
                 </label>
                 <label>Preferred Times 
                     <input
-                        name="times"
+                        name="preferred_times"
                         type="text"
                         placeholder="Preferred times..."
-                        value=""
+                        onChange={onChange}
+                        value={form.preferred_times}
                 />
                 </label>
                 <label>What are your interests?
                     <input
-                        name=""
+                        name="interests"
                         type="text"
                         placeholder="finance, politics, etc"
-                        value=""
+                        onChange={onChange}
+                        value={form.interests}
                     />
-
                 </label>
                 <button>Submit</button>
             </Form>

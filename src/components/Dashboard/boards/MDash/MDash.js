@@ -15,7 +15,7 @@ export const MDash = ( props ) => {
     const UID = props.user_id
     useEffect(() => {
         getMentorData(UID)
-    }, [])
+    },)
     return(
         <>
         <MentorNav/>

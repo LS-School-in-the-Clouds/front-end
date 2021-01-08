@@ -9,7 +9,7 @@ import * as IconName from 'react-icons/im'
 export const AdminNavData = [
     {
         title: 'Home',
-        path: '/',
+        path: '/dash',
         icon: <AiIcons.AiFillHome/>,
         className: 'admin-nav-text',
     },

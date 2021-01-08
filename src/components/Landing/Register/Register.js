@@ -96,7 +96,6 @@ const Register = (props) => {
     };
 
     const handleChange = (ev) => {
-        const {name, value} = ev.target;
         setForm({
             ...form,
             [ev.target.name]: ev.target.value
