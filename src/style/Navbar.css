@@ -16,6 +16,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
+    z-index: 1;
     top: 0;
     transition: 850ms;
     border-right: solid #E3C8FD 5px;
