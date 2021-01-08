@@ -4,7 +4,9 @@ import React from "react"
 import { useHistory, useParams} from 'react-router-dom';
 
 import styled from 'styled-components'
+import { connect } from 'react-redux'
 import StudentNavBar from './StudentNavbar';
+import  getAllMentorData from '../../../../utils/redux/reducers/AppReducer'
 
 // for use when props are passed through
 

@@ -23,7 +23,7 @@ const App = () => {
     <>
     <Router>
       <Switch>
-        <Route exact path="/" component={SMentors}/>
+        <Route exact path="/" component={Landing}/>
         <Route path="/login" component={Login}/>
         <Route path="/register" component={Register}/>
         <PrivateRoute path="/dash" component={Dashboard}/>

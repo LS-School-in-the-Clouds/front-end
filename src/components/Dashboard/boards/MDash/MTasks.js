@@ -22,3 +22,4 @@ export default MTasks
 const MainContainer = styled.div`
     border: 2px solid #E3C8FD;
     width: 90%;
+    `
