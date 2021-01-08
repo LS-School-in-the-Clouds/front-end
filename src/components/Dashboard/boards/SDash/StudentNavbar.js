@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 //Component Imports
 import StudentNavData from './StudentNavdata'
+import styled from 'styled-components'
 
 const StudentNavBar = (props) => {
     return (
@@ -21,10 +22,17 @@ const StudentNavBar = (props) => {
                         );
                     })}
                 </ul>
-
             </div>
         </div>
     )
 }
 
 export default StudentNavBar
+
+const LogOut = styled.button`
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    width: 230px;
+    height: 75px;
+`

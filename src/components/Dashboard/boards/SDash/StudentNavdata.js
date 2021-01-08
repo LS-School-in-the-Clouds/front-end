@@ -6,6 +6,7 @@ import * as MdIcons from 'react-icons/md'
 import * as IconName from 'react-icons/im'
 
 
+
  const StudentNavData = [
     {
         title: 'Home',

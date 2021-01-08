@@ -1,5 +1,4 @@
 //Action imports
-import "../actions/AuthActions";
 import { USER_LOGGED_IN, USER_SIGNED_UP } from "../actions/AuthActions";
 
 const initialState = {

@@ -5,7 +5,7 @@ import { Link, Redirect, useParams, Route, Switch } from "react-router-dom"
 
 //Component imports
 import Navbar from "./MDash/MentorNav";
-import { getAdminData, getMentorData, getStudentData } from "../../../utils/redux/actions/AuthActions";
+import { getAdminData, getMentorData, getStudentData } from "../../../utils/redux/actions/AppActions";
 import ADash from "./ADash/ADash";
 import MDash from "./MDash/MDash";
 import SDash from "./SDash/SDash";

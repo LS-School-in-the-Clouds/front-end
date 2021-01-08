@@ -16,9 +16,20 @@ import styled from 'styled-components'
         display:flex;
         flex-direction:column;
         justify-content:center;
-        margin:0 auto;
-        margin-top:30%;
-        
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        margin-left:23%;
+        margin-bottom:7%;
+
+
+    @media (max-width: 1200px) {
+        margin-left:0%;
+        margin-bottom:12%;
+    }
 
               // BLACK BOX CSS
 
@@ -37,6 +48,7 @@ import styled from 'styled-components'
             display:flex;
             flex-direction:column;
             align-self:center;
+            
            
 
         }

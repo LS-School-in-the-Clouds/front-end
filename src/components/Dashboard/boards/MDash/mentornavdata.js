@@ -15,19 +15,19 @@ import * as IconName from 'react-icons/im'
     },
     {
         title: 'Tasks',
-        path: '/tasks',
+        path: '/dash/tasks',
         icon: <FaIcons.FaTasks/>,
         className: 'nav-text',
     },
     {
         title: 'Group',
-        path: '/group',
+        path: '/dash/group',
         icon: <MdIcons.MdGroup/>,
         className: 'nav-text',
     },
     {
         title: 'Profile',
-        path: '/profile',
+        path: '/dash/profile',
         icon: <IconName.ImProfile/>,
         className: 'nav-text',
     },
