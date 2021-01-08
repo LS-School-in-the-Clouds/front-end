@@ -10,19 +10,19 @@ import * as IconName from 'react-icons/im'
  const StudentNavData = [
     {
         title: 'Home',
-        path: '/',
+        path: '/dash',
         icon: <AiIcons.AiFillHome/>,
         className: 'student-nav-text',
     },
     {
         title: 'Mentors',
-        path: '/mentors',
+        path: '/dash/mentors',
         icon: <MdIcons.MdGroup/>,
         className: 'student-nav-text',
     },
     {
         title: 'Profile',
-        path: '/profile',
+        path: '/dash/profile',
         icon: <IconName.ImProfile/>,
         className: 'student-nav-text',
     },

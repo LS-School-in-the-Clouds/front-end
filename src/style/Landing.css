@@ -27,7 +27,9 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+	
 }
+
 
 ol, ul {
 	list-style: none;
@@ -83,8 +85,19 @@ input, select, textarea {
 	}
 
 	body {
-		background: #2e3842;
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./content/clouds.jpg');
+		background-attachment: fixed;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		text-align: center;
+		height: 107vh;
+		min-height: 35em;
+		
+		
+		
 	}
+
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 			-moz-animation: none !important;
