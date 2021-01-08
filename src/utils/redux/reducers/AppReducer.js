@@ -16,6 +16,7 @@ const initialState = {
     time_zone: "",
     img_url: "",
     tasks: [],
+    mentors: [], 
 }
 
 export const AppReducer = (state = initialState, action) => {
@@ -45,6 +46,7 @@ export const AppReducer = (state = initialState, action) => {
                 user_id: action.payload.user_id,
             }
         case RECEIVED_STUDENT:
+            console.log(action.payload)
             return{
                 ...state,
                 first_name: action.payload.first_name,

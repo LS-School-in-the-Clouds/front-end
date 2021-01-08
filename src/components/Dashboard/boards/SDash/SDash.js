@@ -4,26 +4,28 @@ import { Route } from "react-router-dom"
 import { connect } from 'react-redux';
 
 //Component Imports
-import { getStudentData } from '../../../../utils/redux/actions/AppActions'
+import { getAllMentorData, getStudentData } from '../../../../utils/redux/actions/AppActions'
 import StudentNavBar from './StudentNavbar';
 import SMentors from './SMentors';
 import SProfile from './SProfile';
 import MentorList from './SMentors';
 
+//Style Imports
 import { ThemeProvider } from 'styled-components'
+import { MainContainer } from '../../../../style/StyledComponents'
 
 
 export const SDash = (props) => {
     const UID = props.user_id
     useEffect(() => {
-        getStudentData(UID)
+        props.getStudentData(UID);
+        props.getAllMentorData();
     });
     return(
         <>
         <StudentNavBar />
         <Route path={'/dash/mentors'}>
             <SMentors />
-        
         </Route>
         <Route path={'/dash/profile'}>
             <SProfile />
@@ -43,7 +45,8 @@ const mapStateToProps = (state) => {
         preferred_times: state.app.preferred_times,
         time_zone: state.app.time_zone,
         img_url: state.app.img_url,
-        user_id: state.app.user_id,
+        user_id: state.auth.user_id,
+        role: state.auth.role,
     }
 }
-export default connect(mapStateToProps, { getStudentData })(SDash); 
+export default connect(mapStateToProps, { getStudentData, getAllMentorData })(SDash); 

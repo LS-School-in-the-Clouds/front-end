@@ -1,12 +1,12 @@
 
-import React from "react"
+import React, { useEffect } from "react"
 
 import { useHistory, useParams} from 'react-router-dom';
 
 import styled from 'styled-components'
 import { connect } from 'react-redux'
 import StudentNavBar from './StudentNavbar';
-import  getAllMentorData from '../../../../utils/redux/reducers/AppReducer'
+import getAllMentorData from '../../../../utils/redux/reducers/AppReducer'
 
 // for use when props are passed through
 
@@ -84,71 +84,55 @@ const StyledMentor = styled.div`
     width:100%;
   }
 ` 
-
-
-
 const SMentors = (props) => {
 
     //const { index } = props.mentor;
 
     //const history = useHistory();
+    // useEffect(() => {
+    //     getAllMentorData();
+    //     console.log("magic")
+    // }, [])
     return(
-
         // ADD NAV BAR
-
         <StyledMentor>
 
             <div>
-
             <form>
                 <h1>Browse Mentors</h1>
                 <input type="text" placeholder="Search..."></input> 
             </form>
-
             <br />
-
             {/* onClick={() => history.push(`/dash/mentors/${index}`*/}
             <div className="mentor-card">
                 <div className="mentor-name">
                 Name: <em>NAME</em>
                 </div>
-
                 <div className="mentor-title">
                 JOB TITLE <em>MENTOR JOB TITLE</em>
                 </div>
-
                 <div className="mentor-timezone">
                 TIMEZONE <em>MENTOR TIMEZONE</em>
                 </div>
-
                 <div className="mentor-city">
                 CITY <em>MENTOR CITY</em>
                 </div>
-
                 <button> Add Mentor</button>
             </div>
-
-            
-
             <div className="mentor-card">
                 <div className="mentor-name">
                 Name: <em>NAME</em>
                 </div>
-
                 <div className="mentor-title">
                 JOB TITLE <em>MENTOR JOB TITLE</em>
                 </div>
-
                 <div className="mentor-timezone">
                 TIMEZONE <em>MENTOR TIMEZONE</em>
                 </div>
-
                 <div className="mentor-city">
                 CITY <em>MENTOR CITY</em>
                 </div>
-
                 <button> Add Mentor</button>
-
             </div>
          </div>
 

@@ -17,7 +17,7 @@ import styled from 'styled-components'
 export const MDash = ( props ) => {
     const UID = props.user_id
     useEffect(() => {
-        getMentorData(UID)
+        props.getMentorData(UID)
     },)
     return(
         <>
@@ -62,7 +62,7 @@ const mapStateToProps = (state) => {
         preferred_times: state.app.preferred_times,
         time_zone: state.app.time_zone,
         img_url: state.app.img_url,
-        user_id: state.app.user_id,
+        user_id: state.auth.user_id,
     }
 }
 

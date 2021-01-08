@@ -14,7 +14,6 @@ export const signUpSubmit = form => dispatch => {
         axiosWithAuth()
         .post(`${API_BASE}/auth/register`, form)
         .then(res => {
-            console.log(res.data)
             dispatch({ type: USER_SIGNED_UP, payload: res.data })
         })
         .catch(err => {
@@ -29,7 +28,6 @@ export const logInSubmit = form => dispatch => {
         .post(`${API_BASE}/auth/login`, form)
         .then(res => {
             localStorage.setItem("token", res.data.token)
-            console.log(res.data)
             dispatch({ type: USER_LOGGED_IN, payload: res.data })
         })
         .catch(err => {

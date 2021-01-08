@@ -1,6 +1,12 @@
+//Functional Imports
 import React, { useState } from "react"
+import { useHistory } from "react-router-dom"
 import { connect } from 'react-redux'
-import styled from 'styled-components'
+
+//Component Imports
+import { postSProfileData } from '../../../../utils/redux/actions/AppActions'
+//Style Imports
+import styled from 'styled-components';
 
 const initialForm = {
     first_name: '',
@@ -15,17 +21,28 @@ const initialForm = {
     user_id: '',
   }
 
-const SProfile = (props) => {
+export const SProfile = (props) => {
+    
+    const history = useHistory();
+    const UID = props.user_id;
     const [form, setForm] = useState(initialForm)
     const onChange = (ev) => {
         setForm({...form,
         [ev.target.name]: ev.target.value
         })
     }
+
+    const onSubmit = (ev) => {
+        ev.preventDefault();
+        props.postSProfileData(UID, form);
+        setForm(initialForm);
+        history.push('/dash');
+        };
+    
     return(
         <>
         <SignUpStyle>
-            <Form>
+            <Form onSubmit={onSubmit}>
                 <h2>Hi <span>Student!</span> <br/> Let's get your profile updated</h2>
                 <label>What is your first name?
                     <input
@@ -88,9 +105,6 @@ const SProfile = (props) => {
     )
 }
 
-export default SProfile;
-
-
 const Form = styled.form`
     height: 100%;
     width: 65%;
@@ -98,71 +112,64 @@ const Form = styled.form`
     flex-direction: column;
     align-items: center;
 `
-
 const InputDiv = styled.div`
     justify-content: center;
     align-items: center;
 
 `
-
 const SignUpStyle = styled.div`
-         
-         width:40%;
+    width:40%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;   
+    // BLACK BOX CSS
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 450px;
+    height: 90vh;
+    background: #000000;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    form {
+        margin-top: 20px;
+        height: auto;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        
+    }
+    .submit {
+        margin-top: 30px;
+        
+    }
+    input {
+        border-radius: 20px;
+        margin-top: 10px;
+    }
+    button {
+        border-radius: 100px;
+        width: 70%;
+        height: 50px;
         display:flex;
-        flex-direction:column;
         justify-content:center;
+        align-self: center;
+        align-items: center;
+        margin-top: 15px;
         
-
-              // BLACK BOX CSS
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        width: 450px;
-        height: 90vh;
-        background: #000000;
-        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
-        border-radius: 40px;
-
-        form {
-            margin-top:20px;
-            height:auto;
-            width:70%;
-            display:flex;
-            flex-direction:column;
-            align-self:center;
-           
-
-        }
-        .submit {
-            margin-top:30px;
-            
-            
-        }
-        input {
-            border-radius: 20px;
-            margin-top:10px;
-        }
-      button {
-          border-radius: 100px;
-          width:70%;
-          height: 50px;
-          display:flex;
-          justify-content:center;
-          align-self:center;
-          align-items:center;
-          margin-top:15px;
-          
-      }
-
-      option {
-          background-color:black;
-      }
-
-      span {
-          color: #FFD089;
-      }
-        
+    }
+    option {
+        background-color: black;
+    }
+    span {
+        color: #FFD089;
+    }
 `
+const mapStateToProps = (state) => {
+    return state
+}
+export default connect(mapStateToProps, { postSProfileData })(SProfile)

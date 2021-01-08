@@ -13,7 +13,6 @@ import SDash from "./SDash/SDash";
 //Style imports
 
 const Dashboard = ({ role, user_id }) => {
-    const UID = user_id;
     if (role === "admin") {
         return(
             <ADash />

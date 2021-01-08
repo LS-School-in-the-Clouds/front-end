@@ -44,7 +44,7 @@ const mapStateToProps = (state) => {
         state: state.app.state,
         country: state.app.country,
         img_url: state.app.img_url,
-        user_id: state.app.user_id,
+        user_id: state.auth.user_id,
     }
 }
 
