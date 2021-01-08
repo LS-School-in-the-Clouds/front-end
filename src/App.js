@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 //Style Imports
 import './style/App.css';
+import styled from 'styled-components' 
+import { ThemeProvider } from 'styled-components'
 
 //Component Imports
 import Login from "./components/Landing/Login/Login";
@@ -14,12 +16,14 @@ import PrivateRoute from "./utils/hooks/PrivateRoute";
 
 import MDash from './components/Dashboard/boards/MDash/MDash'
 
+import SMentors from '../src/components/Dashboard/boards/SDash/SMentors'
+
 const App = () => {
   return (
     <>
     <Router>
       <Switch>
-        <Route exact path="/" component={MDash}/>
+        <Route exact path="/" component={SMentors}/>
         <Route path="/login" component={Login}/>
         <Route path="/register" component={Register}/>
         <PrivateRoute path="/dash" component={Dashboard}/>

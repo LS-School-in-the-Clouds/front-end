@@ -34,7 +34,7 @@ export default function Content(props) {
       <div className="inner">
         <h2>School In The Cloud</h2>
         <p>
-          School in the Cloud is a platform that trains senior volunteers to teach students in a group or individual setting..
+          A all-in-one solution that connects community mentors with students based on interests, career goals and location.  
         </p>
         <ul className="actions special">
       
@@ -60,14 +60,12 @@ export default function Content(props) {
       <div className="inner">
         <header className="major">
           <h2>
-            Arcu aliquet vel lobortis ata nisl<br />
-            eget augue amet aliquet nisl cep donec
+            Local community members want to share their insights<br />
+            & students want to become better prepared for the future. 
           </h2>
           <p>
-            Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet
-            eleifend<br />
-            fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus
-            ullamcorper.
+            School in the Cloud trains community members on how to engage with young students<br />
+            while connecting students with mentors that can impact their lives.
           </p>
         </header>
        
@@ -79,12 +77,10 @@ export default function Content(props) {
         <div className="image"><img src={PicOne} alt="" /></div>
         <div className="content">
           <h2>
-            Magna primis lobortis<br />
-            sed ullamcorper
+          Students - connect and get advice from seniors in your area
           </h2>
           <p>
-            Aliquam ut ex ut augue consectetur interdum. Donec hendrerit
-            imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.
+          Working with senior volunteers reinforces the material in school and facilitates a strong connection with those more experienced than you in your town.
           </p>
         </div>
       </section>
@@ -92,12 +88,11 @@ export default function Content(props) {
         <div className="image"><img src={PicTwo} alt="" /></div>
         <div className="content">
           <h2>
-            Tortor dolore feugiat<br />
-            elementum magna
+            Professionals - find your purpose <br />
+            
           </h2>
           <p>
-            Aliquam ut ex ut augue consectetur interdum. Donec hendrerit
-            imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.
+          Mentoring a student can provide meaning to your free time when you work to help close the achievement gap in your community.
           </p>
         </div>
       </section>
@@ -106,12 +101,11 @@ export default function Content(props) {
         <div className="image"><img src={PicThree} alt="" /></div>
         <div className="content">
           <h2>
-            Augue eleifend aliquet<br />
-            sed condimentum
+          A training software<br />
+            so mentors are 100% effective
           </h2>
           <p>
-            Aliquam ut ex ut augue consectetur interdum. Donec hendrerit
-            imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.
+          Train mentors to ensure their knowledge is shared in the most effective way possible.
           </p>
           </div>
         
@@ -121,55 +115,50 @@ export default function Content(props) {
     <section id="three" className="wrapper style3 special">
       <div className="inner">
         <header className="major">
-          <h2>Accumsan mus tortor nunc aliquet</h2>
+          <h2>Both students and mentors experience tremendous outcomes for both their personal achievements and community.</h2>
           <p>
-            Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet
-            eleifend<br />
-            fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus
-            ullamcorper.
+          We work each and every day to provide students with the necessary mentorship to succeed in the classroom and in life. 
+            <br />
           </p>
         </header>
         <ul className="features">
           <li className="icon fa-paper-plane">
-            <h3>Arcu accumsan</h3>
+            <h3>Jimmy - HS Senior</h3>
             <p>
-              Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem
-              tincidunt nullam amet leo Aenean ligula consequat consequat.
+            “Working with Mr. Gray really helped my confidence in Math. I look forward to quiz day now!”
             </p>
           </li>
           <li className="icon solid fa-laptop">
-            <h3>Ac Augue Eget</h3>
+            <h3>Mr. Baptist - Retired Navy General</h3>
             <p>
-              Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem
-              tincidunt nullam amet leo Aenean ligula consequat consequat.
+            “After I retired from an illustrious career in the Navy, I had no longer had the same energy to face each new day. SITC has provided me with meaning each week to mentor students looking to make a difference in their lives.”
             </p>
           </li>
           <li className="icon solid fa-code">
-            <h3>Mus Scelerisque</h3>
+            <h3>Emma - HS Sophomore</h3>
             <p>
-              Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem
-              tincidunt nullam amet leo Aenean ligula consequat consequat.
+            “I now know what career I want to get into. I am going to prepare to get into my favorite universities! As a first-generation college students, every session opened my eyes to a world I never experienced.”
             </p>
           </li>
           <li className="icon solid fa-headphones-alt">
-            <h3>Mauris Imperdiet</h3>
+            <h3>Mrs. Johnson - Financial Advisor</h3>
             <p>
-              Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem
-              tincidunt nullam amet leo Aenean ligula consequat consequat.
+            “Teaching has always been a passion of mine, but life carried me away on a different path. Retirement has a new meaning for me when I get to interact and shape the next generation of leaders in our country.”
+
             </p>
           </li>
           <li className="icon fa-heart">
-            <h3>Aenean Primis</h3>
+            <h3>Grace - College Sophomore</h3>
             <p>
-              Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem
-              tincidunt nullam amet leo Aenean ligula consequat consequat.
+            “School in the Clouds has been immensely helpful in teaching me to focus on the WHY behind my education. Critical thinking is exciting now!”
+
             </p>
           </li>
           <li className="icon fa-flag">
-            <h3>Tortor Ut</h3>
+            <h3>Mr. Young - Software Engineer</h3>
             <p>
-              Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem
-              tincidunt nullam amet leo Aenean ligula consequat consequat.
+            “Mentorship provides the ability to reflect critically on one’s life. Working with such passionate students allows me the opportunity to share my wisdom and perspective on life with young members of my community.”
+
             </p>
           </li>
         </ul>
@@ -197,8 +186,8 @@ export default function Content(props) {
         </li>
       </ul>
       <ul className="copyright">
-        <li>© Buddy Agyin 2020</li>
-        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        <li>@ School in the Clouds 2021</li>
+        <li>Design: <a href="http://html5up.net">Track-Team 44</a></li>
       </ul>
     </footer>
   </div>

@@ -2,11 +2,11 @@
 import axiosWithAuth from "../../hooks/axiosWithAuth";
 
 //Functional Imports
-import axios from "axios";
 import API_BASE from "../../keys";
 export const RECEIVED_ADMIN = "RECEIVED_ADMIN";
 export const RECEIVED_MENTOR = "RECIEVED_MENTOR";
 export const RECEIVED_STUDENT = "RECEIVED_STUDENT";
+export const RECEIVED_ALL_TASKS = "RECEIVED_ALL_TASKS"
 
 //Style Imports
 
@@ -42,6 +42,19 @@ export const getStudentData = id => dispatch => {
         .get(`${API_BASE}/student/:${id}`)
         .then(res => {
             dispatch({ type: RECEIVED_STUDENT, payload: res.data })
+        })
+        .catch(err => {
+            console.log(err)
+        })
+    );
+}
+
+export const getAllTaskData = dispatch => {
+    return(
+        axiosWithAuth()
+        .get(`${API_BASE}/tasks`)
+        .then(res => {
+            dispatch({ type: RECEIVED_ALL_TASKS, payload: res.data })
         })
         .catch(err => {
             console.log(err)

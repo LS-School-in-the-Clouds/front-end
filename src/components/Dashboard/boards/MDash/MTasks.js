@@ -1,3 +1,4 @@
+
 import React from 'react'
 import styled from 'styled-components'
 import MentorNav from './MentorNav'
@@ -15,10 +16,9 @@ function MTasks() {
     )
 }
 
+
 export default MTasks
 
 const MainContainer = styled.div`
     border: 2px solid #E3C8FD;
     width: 90%;
-
-`

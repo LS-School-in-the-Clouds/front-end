@@ -10,9 +10,9 @@ import './style/index.css';
 import App from './App';
 
 //Component Imports
-import reducer from "./utils/redux/reducers/AuthReducer"
+import rootReducer from "./utils/redux/reducers"
 
-const store = createStore(reducer, applyMiddleware(thunk))
+const store = createStore(rootReducer, applyMiddleware(thunk))
 
 
 ReactDOM.render(

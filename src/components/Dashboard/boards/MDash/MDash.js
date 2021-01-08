@@ -14,8 +14,8 @@ import MProfile from './MProfile';
 import styled from 'styled-components'
 
 
-export const MDash = ({ user_id }) => {
-    const UID = user_id
+export const MDash = ( props ) => {
+    const UID = props.user_id
     useEffect(() => {
         getMentorData(UID)
     }, [])
@@ -53,16 +53,16 @@ export const MDash = ({ user_id }) => {
 
 const mapStateToProps = (state) => {
     return{
-        first_name: state.first_name,
-        last_name: state.last_name,
-        interests: state.interests,
-        state: state.state,
-        country: state.country,
-        career: state.career,
-        preferred_times: state.preferred_times,
-        time_zone: state.time_zone,
-        img_url: state.img_url,
-        user_id: state.user_id,
+        first_name: state.app.first_name,
+        last_name: state.app.last_name,
+        interests: state.app.interests,
+        state: state.app.state,
+        country: state.app.country,
+        career: state.app.career,
+        preferred_times: state.app.preferred_times,
+        time_zone: state.app.time_zone,
+        img_url: state.app.img_url,
+        user_id: state.app.user_id,
     }
 }
 

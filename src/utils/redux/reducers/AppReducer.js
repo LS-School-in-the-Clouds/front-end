@@ -1,5 +1,5 @@
 //Action imports
-import { RECEIVED_STUDENT, RECEIVED_MENTOR, RECEIVED_ADMIN } from '../actions/AppActions'
+import { RECEIVED_STUDENT, RECEIVED_MENTOR, RECEIVED_ADMIN, RECEIVED_ALL_TASKS } from '../actions/AppActions'
 
 const initialState = {
     school_district: "",
@@ -15,9 +15,10 @@ const initialState = {
     preferred_times: "",
     time_zone: "",
     img_url: "",
+    tasks: [],
 }
 
-const reducer = (state = initialState, action) => {
+export const AppReducer = (state = initialState, action) => {
     switch(action.type){
         case RECEIVED_ADMIN:
             return{
@@ -57,7 +58,15 @@ const reducer = (state = initialState, action) => {
                 img_url: action.payload.img_url,
                 user_id: action.payload.user_id,
             }
+        case RECEIVED_ALL_TASKS:
+            return {
+                ...state,
+                tasks: action.payload.tasks
+            }
         default:
             return state;
     }
+
 }
+
+export default AppReducer;
