@@ -22,7 +22,14 @@ import styled from 'styled-components'
         left: 0;
         right: 0;
         margin: auto;
-        
+        margin-left:23%;
+        margin-bottom:7%;
+
+
+    @media (max-width: 1200px) {
+        margin-left:0%;
+        margin-bottom:12%;
+    }
 
               // BLACK BOX CSS
 
@@ -41,6 +48,7 @@ import styled from 'styled-components'
             display:flex;
             flex-direction:column;
             align-self:center;
+            
            
 
         }

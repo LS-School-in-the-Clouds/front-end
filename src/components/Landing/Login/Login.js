@@ -10,16 +10,27 @@ import styled from 'styled-components'
 ////// STYLING ////////
 const MainContainer = styled.div`
 width:40%;
+height:auto;
 display:flex;
 flex-direction:column;
 justify-content:center;
 font-size:1.1rem;
-position: absolute;
+position:absolute;
 top: 0;
 bottom: 0;
 left: 0;
 right: 0;
 margin: auto;
+margin-left:25%;
+margin-bottom:12%;
+
+
+@media (max-width: 1200px) {
+    margin-left:0%;
+    margin-bottom:20%;
+  }
+  
+
 
 
 // BLACK BOX CSS
