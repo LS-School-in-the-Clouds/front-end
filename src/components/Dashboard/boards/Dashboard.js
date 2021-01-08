@@ -9,28 +9,24 @@ import { getAdminData, getMentorData, getStudentData } from "../../../utils/redu
 import ADash from "./ADash/ADash";
 import MDash from "./MDash/MDash";
 import SDash from "./SDash/SDash";
-import PrivateRoute from "../../../utils/hooks/PrivateRoute";
-import SMentors from "./SDash/SMentors";
+
 //Style imports
 
 const Dashboard = ({ role, user_id }) => {
     const UID = user_id;
     if (role === "admin") {
-        getAdminData(UID);
         return(
             <ADash />
         )
     };
 
     if (role === "mentor") {
-        getMentorData(UID);
         return(
             <MDash />
         )
     };
 
     if (role === "student") {
-        getStudentData(UID);
         return(
             <SDash />
         )
@@ -44,8 +40,8 @@ const Dashboard = ({ role, user_id }) => {
 
 const mapStateToProps = (state) => {
     return{
-        role: state.role,
-        user_id: state.user_id,
+        role: state.auth.role,
+        user_id: state.auth.user_id,
     }
 
 }
