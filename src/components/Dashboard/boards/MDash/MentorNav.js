@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 import MentorNavData from './mentornavdata'
 import '../../../../style/Navbar.css'
 
-const MentorNavbar = () => {
+const MentorNav = () => {
     return(
         <>
             <div className="nav-menu">
@@ -24,4 +24,4 @@ const MentorNavbar = () => {
     ) 
 }
 
-export default MentorNavbar;
+export default MentorNav;
