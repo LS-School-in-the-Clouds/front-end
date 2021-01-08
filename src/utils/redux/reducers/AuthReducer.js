@@ -9,7 +9,7 @@ const initialState = {
     role: "",
 }
 
-const reducer = (state = initialState, action) => {
+export const AuthReducer = (state = initialState, action) => {
     switch (action.type) {
         case USER_SIGNED_UP:
             return {
@@ -30,4 +30,4 @@ const reducer = (state = initialState, action) => {
     }
 }
 
-export default reducer
+export default AuthReducer;

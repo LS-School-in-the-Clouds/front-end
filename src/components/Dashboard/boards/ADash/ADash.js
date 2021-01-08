@@ -1,7 +1,8 @@
 //Functional imports
 
-import React,{ useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Route } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 //Component Imports
 
@@ -10,13 +11,14 @@ import AdminNavBar from './AdminNavbar';
 import AMentors from './AMentors';
 import ATasks from './ATasks.js';
 import ASettings from './ASettings';
-import { connect } from 'react-redux';
+
 
 
 export const ADash = (props) => {
     const UID = props.user_id
     useEffect(() => {
         getAdminData(UID);
+        console.log(UID)
     }, [])
     return(
         <>
@@ -37,12 +39,12 @@ export const ADash = (props) => {
 
 const mapStateToProps = (state) => {
     return{ 
-        school_district: state.school_district,
-        school_name: state.school_name,
-        state: state.state,
-        country: state.country,
-        img_url: state.img_url,
-        user_id: state.user_id,
+        school_district: state.app.school_district,
+        school_name: state.app.school_name,
+        state: state.app.state,
+        country: state.app.country,
+        img_url: state.app.img_url,
+        user_id: state.app.user_id,
     }
 }
 

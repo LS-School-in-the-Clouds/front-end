@@ -9,7 +9,7 @@ import * as IconName from 'react-icons/im'
  const MentorNavData = [
     {
         title: 'Home',
-        path: '/',
+        path: '/dash',
         icon: <AiIcons.AiFillHome/>,
         className: 'nav-text',
     },

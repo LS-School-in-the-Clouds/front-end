@@ -1,3 +1,4 @@
+
 import React from "react"
 
 import { useHistory, useParams} from 'react-router-dom';
@@ -151,8 +152,13 @@ const SMentors = (props) => {
          </div>
 
         </StyledMentor>
-        
     )
 }
 
-export default SMentors;
+const mapStateToProps = (state) => {
+    return{
+        tasks: state.app.tasks
+    }
+}
+
+export default connect(mapStateToProps, { getAllTaskData }) (SMentors)
