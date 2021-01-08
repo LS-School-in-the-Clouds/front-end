@@ -76,12 +76,6 @@ function Login(props) {
         history.push('/dash')
         };
 
-
-  
-
-
-
-
     return(
     <MainContainer className='LoginForm'>
         <h1>Login</h1>

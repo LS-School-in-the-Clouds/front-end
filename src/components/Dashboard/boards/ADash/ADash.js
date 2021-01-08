@@ -13,8 +13,8 @@ import ASettings from './ASettings';
 import { connect } from 'react-redux';
 
 
-export const ADash = ({ user_id }) => {
-    const UID = user_id
+export const ADash = (props) => {
+    const UID = props.user_id
     useEffect(() => {
         getAdminData(UID);
     }, [])

@@ -5,7 +5,7 @@ import { Route } from "react-router-dom";
 
 //Component imports
 import { getMentorData } from '../../../../utils/redux/actions/AppActions'
-import MentorNavbar from './MentorNav';
+import MentorNav from './MentorNav';
 import MTasks from './MTasks';
 import MGroup from './MGroup';
 import MProfile from './MProfile';
@@ -18,7 +18,7 @@ export const MDash = ({ user_id }) => {
     }, [])
     return(
         <>
-        <MentorNavbar/>
+        <MentorNav/>
         <Route path={'/dash/tasks'}>
             <MTasks />
         </Route>
