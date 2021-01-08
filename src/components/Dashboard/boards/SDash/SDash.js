@@ -8,6 +8,9 @@ import { getStudentData } from '../../../../utils/redux/actions/AppActions'
 import StudentNavBar from './StudentNavbar';
 import SMentors from './SMentors';
 import SProfile from './SProfile';
+import MentorList from './SMentors';
+
+import { ThemeProvider } from 'styled-components'
 
 
 export const SDash = (props) => {
@@ -15,11 +18,13 @@ export const SDash = (props) => {
     useEffect(() => {
         getStudentData(UID)
     }, []);
+
     return(
         <>
         <StudentNavBar />
         <Route path={'/dash/mentors'}>
             <SMentors />
+        
         </Route>
         <Route path={'/dash/profile'}>
             <SProfile />
