@@ -1,6 +1,6 @@
 import React from "react"
 import { NavLink } from 'react-router-dom'
-import MentorNavData from './MentorNavData'
+import MentorNavData from './mentornavdata'
 import '../../../../style/Navbar.css'
 
 const MentorNavbar = () => {
