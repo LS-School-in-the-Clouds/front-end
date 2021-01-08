@@ -6,6 +6,7 @@ function StudentOnboarding() {
         <div>
             <div>
                 <Form>
+                    <h2>Let's get your profile updated</h2>
                     <label>What is your first name?
                         <input
                             name="firstName"
@@ -38,7 +39,7 @@ function StudentOnboarding() {
                             value=""
                         />
                     </label>
-                    <label>Preferred Times
+                    <label>Preferred Times 
                         <input
                             name="times"
                             type="text"
@@ -46,9 +47,12 @@ function StudentOnboarding() {
                             value=""
                     />
                     </label>
-                    <label>
+                    <label>What are your interests?
                         <input
                             name=""
+                            type="text"
+                            placeholder="finance, politics, etc"
+                            value=""
                         />
 
                     </label>
