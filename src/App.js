@@ -2,7 +2,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-
 //Style Imports
 import './style/App.css';
 
@@ -13,12 +12,14 @@ import Register from "./components/Landing/Register/Register";
 import Dashboard from "./components/Dashboard/boards/Dashboard";
 import PrivateRoute from "./utils/hooks/PrivateRoute";
 
+import AdminOnboarding from './components/Onboarding/AdminOnb.js'
+
 const App = () => {
   return (
     <>
     <Router>
       <Switch>
-        <Route exact path="/" component={Landing}/>
+        <Route exact path="/" component={AdminOnboarding}/>
         <Route path="/login" component={Login}/>
         <Route path="/register" component={Register}/>
         <PrivateRoute path="/dash" component={Dashboard}/>
