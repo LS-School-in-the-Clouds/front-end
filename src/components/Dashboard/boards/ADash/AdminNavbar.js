@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import AdminNavData from './AdminNavdata'
+import styled from 'styled-components'
 
 function AdminNavbar() {
     return (
@@ -24,3 +25,11 @@ function AdminNavbar() {
 }
 
 export default AdminNavbar;
+
+const LogOutButton = styled.button`
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    width: 230px;
+    height: 75px;
+`

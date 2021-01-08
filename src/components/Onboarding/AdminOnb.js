@@ -1,10 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import {OnboardingStyle} from '../../../style/StyledComponents'
+
 function AdminOnboarding() {
     return (
         <div>
-            <SignUpStyle>
+            <OnboardingStyle>
                 <Form>
                     <h2>Hi <span>Admin!</span> <br/> Let's get your profile updated</h2>
                     <label>What is your first name?
@@ -57,7 +59,7 @@ function AdminOnboarding() {
                     </label>
                     <button>Submit</button>
                 </Form>
-            </SignUpStyle>
+            </OnboardingStyle>
         </div>
     )
 }
@@ -73,7 +75,7 @@ const Form = styled.form`
     justify-content: center;
 `
 
-const SignUpStyle = styled.div`
+const OnbooardingStyle = styled.div`
     
          
          width:40%;

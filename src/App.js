@@ -14,16 +14,14 @@ import Register from "./components/Landing/Register/Register";
 import Dashboard from "./components/Dashboard/boards/Dashboard";
 import PrivateRoute from "./utils/hooks/PrivateRoute";
 
-import MDash from './components/Dashboard/boards/MDash/MDash'
-
-import SMentors from '../src/components/Dashboard/boards/SDash/SMentors'
+import StudentOnboarding from './components/Onboarding/StudentOnb'
 
 const App = () => {
   return (
     <>
     <Router>
       <Switch>
-        <Route exact path="/" component={Landing}/>
+        <Route exact path="/" component={StudentOnboarding}/>
         <Route path="/login" component={Login}/>
         <Route path="/register" component={Register}/>
         <PrivateRoute path="/dash" component={Dashboard}/>

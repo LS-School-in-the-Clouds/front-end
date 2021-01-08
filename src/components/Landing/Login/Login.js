@@ -8,7 +8,7 @@ import { useHistory } from "react-router-dom"
 import styled from 'styled-components'
 
 ////// STYLING ////////
-import { MainContainer } from '../../../style/StyledComponents/index'
+import { MainContainer } from '../../../style/StyledComponents'
 
 const initialForm = {
     username: '',
